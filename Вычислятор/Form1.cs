@@ -24,37 +24,35 @@ namespace Вычислятор
 
             byte[] ipByte = ip.GetAddressBytes();
             byte[] maskByte = mask.GetAddressBytes();
-            byte[] networkBytes = new byte[4];
+            byte[] addressNetworkBytes = new byte[4];
             byte[] broadcastBytes = new byte[4];
+
             for (int i = 0; i < 4; i++)
             {
-                networkBytes[i] = (byte)(ipByte[i] & maskByte[i]);
+                addressNetworkBytes[i] = (byte)(ipByte[i] & maskByte[i]);
                 broadcastBytes[i] = (byte)(ipByte[i] | ~maskByte[i]);
             }
 
-            string network = new IPAddress(networkBytes).ToString();
+            string network = new IPAddress(addressNetworkBytes).ToString();
             string broadcast = new IPAddress(broadcastBytes).ToString();
 
             int col = 0;
+
             for (int i = 0; i < 4; i++)
-            {
                 for (int j = 0; j < 8; j++)
-                    if ((maskByte[i] & (1 << j)) == 0)
-                    {
-                        col++;
-                    }
-            }
+                    if ((maskByte[i] & (1 << j)) == 0) 
+                         col++;
+
             int colNetworks = (int)(Math.Pow(2, col));
-            int colHosts = (int)(Math.Pow(2, col)) - 2;
+            int colHosts = colNetworks - 2;
 
             Form2 form = new Form2();
             form.Show();
-            form.labelAddressNetwork.Text = $"Адресс сети {network}";
+            form.labelAddressNetwork.Text   = $"Адрес сети: {network}";
             form.labelBroadcastNetwork.Text = $"Широковещательный адрес: {broadcast}";
-            form.labelCountIpAddress.Text = $"Количество IP-адресов: {colNetworks}";
-            form.labelCountHosts.Text = $"Количество узлов в сети: {colHosts}";
+            form.labelCountIpAddress.Text   = $"Количество IP-адресов: {colNetworks}";
+            form.labelCountHosts.Text       = $"Количество узлов в сети: {colHosts}";
         }
-
       
     }
 }

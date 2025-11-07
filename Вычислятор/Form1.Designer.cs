@@ -49,7 +49,7 @@
             this.textBoxIp.Name = "textBoxIp";
             this.textBoxIp.Size = new System.Drawing.Size(241, 20);
             this.textBoxIp.TabIndex = 1;
-            this.textBoxIp.Text = "192.168.1.10";
+            this.textBoxIp.Text = "192.168.1.104";
          //   this.textBoxIp.TextChanged += new System.EventHandler(this.textBoxIp_TextChanged);
             // 
             // textBoxMask
