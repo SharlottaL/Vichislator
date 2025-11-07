@@ -49,7 +49,7 @@
             this.textBoxIp.Name = "textBoxIp";
             this.textBoxIp.Size = new System.Drawing.Size(241, 20);
             this.textBoxIp.TabIndex = 1;
-            this.textBoxIp.Text = "192.168.1.104";
+            this.textBoxIp.Text = "129.64.134.5";
          //   this.textBoxIp.TextChanged += new System.EventHandler(this.textBoxIp_TextChanged);
             // 
             // textBoxMask
@@ -58,7 +58,7 @@
             this.textBoxMask.Name = "textBoxMask";
             this.textBoxMask.Size = new System.Drawing.Size(241, 20);
             this.textBoxMask.TabIndex = 2;
-            this.textBoxMask.Text = "255.255.255.0";
+            this.textBoxMask.Text = "255.255.128.0";
             // 
             // Form1
             // 
