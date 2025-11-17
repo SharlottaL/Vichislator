@@ -7,6 +7,7 @@
 #define IDC_STATIC_IP_MASK              1002
 #define IDC_IPADDRESS                   1003
 #define IDC_IPADDRESS_MASK              1004
+#define IDC_IPMASK                      1004
 #define IDC_EDIT_PREFIX                 1005
 #define IDC_SPIN_PREFIX                 1006
 #define IDC_STATIC_INFO                 1007
